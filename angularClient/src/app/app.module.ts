@@ -9,17 +9,20 @@ import { CoreModule } from "./core/core.module";
 
 import { from } from 'rxjs';
 import { ShopModule } from './shop/shop.module';
+import { HomeModule } from './home/home.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
-    ShopModule
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
