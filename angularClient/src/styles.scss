@@ -1,3 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 @import '~ngx-toastr/toastr.css';
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "bootswatch/dist/united/bootstrap.min.css";
+
+
+.xng-breadcrumb-root {
+    padding: 8px 16px;
+    display: inline;
+    border-radius: 0;
+}
+
+label.xng-breadcrumb-trail {
+    margin-bottom: 0;
+    color: orange;
+}
+
+.xng-breadcrumb-separator {
+    padding: 0 0;
+}

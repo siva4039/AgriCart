@@ -12,6 +12,8 @@ import { ShopModule } from './shop/shop.module';
 import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { LoadingInterceptors } from './core/interceptors/loading.interceptors';
 
 
 @NgModule({
@@ -25,10 +27,12 @@ import { ErrorInterceptor } from './core/interceptors/error.interceptor';
     HttpClientModule,
     CoreModule,
     HomeModule,
+    NgxSpinnerModule
  
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptors, multi: true},
   ],
   bootstrap: [AppComponent]
 })
