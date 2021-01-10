@@ -29,6 +29,7 @@
     "params-xng-breadcrumb": "^5.0.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "uuid": "^8.3.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
