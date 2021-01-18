@@ -1,0 +1,37 @@
+
+<head>
+	<title>Login Page</title>
+</head>
+<body>
+	
+	<div class="container-fluid">
+		<div class="row main-content bg-success text-center">
+			<div class="col-md-4 text-center company__info">
+				<span class="company__logo"><h2><span><img src="../../../assets/images/agricart-icon-login.jpg" alt="login_logo_agricart" style="width: 100%;"></span></h2></span>
+				<h4 class="company_title">AGRICART</h4>
+			</div>
+			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+				<div class="container-fluid">
+					<div class="row">
+						<h2>Log In</h2>
+					</div>
+					<div class="row">
+						<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-group">
+							
+							<app-text-input formControlName="email" [label]="'Email Address'"></app-text-input>
+							<app-text-input formControlName="password" [label]="'password'" [type]="'password'"></app-text-input>
+							<div class="row">
+								<input [disabled]="loginForm.invalid" type="submit" value="Submit" class="btn">
+							</div>
+						</form>
+					</div>
+					<div class="row">
+						<p>Don't have an account? <a href="#">Register Here</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</body>
